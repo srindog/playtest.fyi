@@ -6,8 +6,8 @@ import Select from 'react-select';
 import { TENNIS } from '../lib/constants';
 
 const Card = ({title, children}: any) => (
-  <div className='flex flex-col shadow p-5 rounded'>
-    <h3 className='flex items-center font-semibold md:text-lg text-base'>{title}</h3>
+  <div className='flex flex-col shadow p-5 rounded text-left'>
+    <h3 className='flex justify-center font-semibold md:text-lg text-base pb-1'>{title}</h3>
     {children}
   </div>
 )
@@ -26,15 +26,15 @@ export default function Example({sports, examples}: any) {
   }
 
   return (
-    <div className='flex flex-col mt-2'>
-      <div className='flex md:flex-row sm:flex-col flex-wrap justify-center items-center align-center mt-2 md:text-lg sm:text-base'>
+    <div className='flex flex-col'>
+      <div className='flex flex-col flex-wrap justify-center items-center align-center mt-2'>
         <div className='flex flex-row mt-2'>
           <p className='mr-2 mt-2'>
             You’re in the
           </p>
           <div className='flex flex-row'>
             <Select
-              className="w-44 mr-2"
+              className="w-44 mr-2 text-left"
               classNamePrefix="select"
               placeholder="Select an industry..."
               name="sports"
@@ -45,12 +45,12 @@ export default function Example({sports, examples}: any) {
           </div>
           <p className='mt-2'>business,</p> 
         </div>
-        <p className='ml-1 mt-3'>launching a new line of {fillIns.product}</p>
+        <p className='ml-1 mt-1'>launching a new line of {fillIns.product}</p>
       </div>
-      <div className='mt-5 grid md:grid-cols-3 grid-cols-1 md:gap-10 gap-2'>
+      <div className='mx-10 mt-5 grid md:grid-cols-3 sm:grid-cols-1 gap-5'>
         <Card title='Strategically plan out playtests'>
           <p>Location: {fillIns.strategy.locations}</p>
-          <p>Consumer Breakdown: {fillIns.strategy.consumerBreakdown}</p>
+          <p>Consumer Breakdown: hi</p>
           <p>Consumer Type: {fillIns.strategy.consumerType}</p>
           <p>Testing Time Period: {fillIns.strategy.timePeriod}</p>
         </Card>
