@@ -85,16 +85,16 @@ const CompaniesHome = () => (
       <Card title="Verified Playtesters ✅">
         Every playtester is verified to ensure
         that they consistently play the sport 
-        at the skill level they list 
+        at their submitted skill level.
       </Card>
       <Card title="No-Hassle Sign Up 📝">
         Start the playtesting process today. After signing up,
-        we'll schedule a call to gather your requirements
+        we&apos;ll schedule a call to gather your requirements
         and go to work.
       </Card>
       <Card title="Powerful, Real-Time Insights 🔎">
         Analyze playtest reviews as they are submitted by skill level, 
-        player attributes, aggregate ratings, and more. You'll be able 
+        player attributes, aggregate ratings, and more. You&apos;ll be able 
         to export this data to use for further custom analysis. 
       </Card>
 
@@ -118,8 +118,8 @@ export default function Home() {
       <div className="flex flex-col text-center">
         
         <div className="md:mx-72 mx-5 font-semibold border-lime-400 border-2 p-3">
-          <h3 className="">Disclaimer: This is an alpha version. We know you'll love playtest.fyi as much as we do. 
-            In fact, if for any reason you're not completely satisfied, we'll issue a full refund 💸.
+          <h3 className="">Disclaimer: This is an alpha version. We know you&apos;ll love playtest.fyi as much as we do. 
+            In fact, if for any reason you&apos;re not completely satisfied, we&apos;ll issue a full refund 💸.
           </h3>
         </div>
         
