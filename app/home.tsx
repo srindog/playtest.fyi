@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-
+import { Player } from '@lottiefiles/react-lottie-player';
 
 const PLAYTESTERS = "For Playtesters";
 const COMPANIES = "For Companies";
@@ -14,7 +14,7 @@ const Card = ({ title, description, children }: any) => (
   </div>
 );
 
-const BASE_BUTTON_STYLE = "mt-2 p-3 items-center";
+const BASE_BUTTON_STYLE = "p-3 items-center";
 const UNSELECTED_BUTTON_STYLE = (rounded: string) =>
   `${BASE_BUTTON_STYLE} ${rounded} bg-gray-200 hover:bg-gray-300 active:bg-gray-200 shadow`;
 const SELECTED_BUTTON_STYLE = (rounded: string) =>
@@ -35,83 +35,137 @@ const Guarantee = () => (
 
 const PlaytestersHome = () => {
   return (
-    <div className="flex flex-col mt-6 space-y-6 pb-10 items-center justify-center">
+    <div className="flex flex-col mt-6 space-y-6 pb-10 items-center justify-center mx-4">
       <div>
         <h1 className="font-semibold md:text-3xl text-2xl">
-          Test out the newest
+          Your feedback is the {' '}
           <p>
-            <span className="text-lime-500">
-              sports equipment
+            <span className="text-lime-600">
+              most valuable
             </span>
           </p>
+          <h2 className="mt-3 md:text-lg text-base">Earn rewards for testing out the {' '}
+            <span className="text-lime-600 font-semibold">
+            🎾 newest products in tennis 🎾
+            </span>
+          </h2>
+          
         </h1>
+
+        
       </div>
+
       <div className="flex flex-col items-center">
         <label className="font-semibold">
-          Invite only. Have a referral?
+          Invite only 🎉. Have a referral?
         </label>
         <a
           href="https://forms.gle/Ve5CEw3DVN68AfCo9"
           target="_blank"
-          className={SELECTED_BUTTON_STYLE('rounded')}
+          className={SELECTED_BUTTON_STYLE('rounded') + ' mt-2'}
         >
-          Sign up to be a playtester!
+          Sign up today!
         </a>
+      </div>
+      <div className="mt-10 md:mx-10 mx-4 grid md:grid-cols-3 grid-cols-1 gap-5">
+        <Card title="Get Verified ✅">
+          After sign up, we verify all our playtesters to accurately
+          gauge their skill level, consistency of play, & community influence.
+        </Card>
+        <Card title="Earn Rewards 🏅">
+          Earn rewards for reviewing the newest products in the industry.
+          Based on your playtest history & community influence, you&apos;ll be 
+          able to earn a variable amount of rewards. Even earn bonuses from posting
+          on social media / or a video review!
+        </Card>
+        <Card title="Save on Future Purchases 💸">
+          Using your rewards, we&apos;ll reimburse you for future tennis-related purchases you make, 
+          or, if you prefer, cash out directly.
+        </Card>
       </div>
     </div>
   )
 }
 
 const CompaniesHome = () => (
-  <div className="flex flex-col space-y-7 mt-7 items-center justify-center pb-10">
-      <div>
-        <h1 className="font-semibold md:text-3xl text-2xl">
-          A product testing platform for
-          <p>
-            <span className="text-lime-500">
-              sports brands
-            </span>
-          </p>
-        </h1>
-      </div>
+  <div className="flex flex-col mt-5 md:px-16 mx-3 pb-10">
+    <div className="flex md:flex-row flex-col md:space-x-52 space-x-0 md:space-y-0 sm:space-y-5 md:text-left md:justify-left items-center justify-center">
       
-      <div className="flex flex-col mt-7 items-center">
-        <label className="font-semibold">
-          Testing out a new product?
-        </label>
-        <a
-          href="https://forms.gle/VbbEth7kiT2AoY56A"
-          target="_blank"
-          className={SELECTED_BUTTON_STYLE('rounded')}
-        >
-          Sign up to run a playtest!
-        </a>
-      </div>
-      {/* <div className="mt-6">
-        <Support />
-      </div> */}
+      <div className="space-y-7 md:pl-20 pl-0">
+        <div>
+          <h1 className="font-semibold md:text-3xl text-2xl">
+            Build better products <p>for the <span className="text-lime-600">tennis industry</span> </p>
+          </h1>
 
-      <div className="md:mx-72 mx-5 mt-6 font-semibold border-lime-400 border-2 p-3">
-        <Guarantee />
+          <h2 className="md:text-xl mt-2 text-base">
+            The only product testing platform
+            {' '}
+              <p className="font-semibold text-lime-600">
+              🎾 made for tennis brands 🎾
+              </p>
+            </h2>
+        </div>
+        
+        <div className="flex flex-col md:w-48">
+          <label className="font-semibold">
+            Building a new product?
+          </label>
+          <a
+            href="https://calendly.com/playtest-fyi/60min"
+            target="_blank"
+            className={SELECTED_BUTTON_STYLE('rounded') + 'justify-center text-center mt-1 md:mx-0 mx-10'}
+          >
+            Schedule a call today!
+          </a>
+        </div>
       </div>
-
-    <div className="mt-10 md:mx-24 mx-5 grid md:grid-cols-3 grid-cols-1 gap-5">
-      <Card title="Verified Playtesters ✅">
-        Every playtester is verified to ensure
-        that they consistently play the sport 
-        at their submitted skill level.
-      </Card>
-      <Card title="No-Hassle Sign Up 📝">
+      <div className="flex flex-row md:w-42 md:h-42 relative z-0 md:space-x-10 space-x-32 justify-center items-center">
+        <div className="absolute inset-0 flex justify-center items-center z-10 skew-y-12 md:pr-80 pr-32 md:pt-10">
+            <Player 
+              src="/99549-review-ratings.json" 
+              className="player" 
+              loop
+              autoplay
+              speed={1} 
+              style={{ height: '300px', width: '300px' }}
+            />
+        </div>
+        <div className="">
+          <Player 
+            src="/40519-isometric-tennis.json" 
+            className="player" 
+            loop
+            autoplay
+            speed={1} 
+            style={{ height: '300px', width: '200px' }}
+          />
+        </div>
+      </div>
+    </div> 
+    
+    <div className="lg:mx-72 md:mx-42 mx-5 mt-1 font-semibold border-lime-400 border-2 p-3">
+      <Guarantee />
+    </div>
+    
+    <div className="mt-10 md:mx-0 grid md:grid-cols-4 grid-cols-1 gap-5">
+      <Card title="Immediate Sign Up 📝">
         Start the playtesting process today. After signing up,
-        we&apos;ll schedule a call to gather your requirements
-        and go to work.
+        we&apos;ll schedule a call to gather your requirements, so
+        you can get back to focusing on building product.
       </Card>
-      <Card title="Powerful, Real-Time Insights 🔎">
-        Analyze playtest reviews as they are submitted by skill level, 
+      <Card title="Verified Playtesters ✅">
+        Every playtester&apos;s skill level, consistency of play, and community influence
+        is verified to ensure that you get the feedback you want.
+      </Card>
+      <Card title="Powerful Feedback 🔎">
+        By collecting highly detailed reviews, analyze playtest reviews by skill level, 
         player attributes, aggregate ratings, and more. You&apos;ll be able 
         to export this data to use for custom analysis. 
       </Card>
-
+      <Card title="Build Hype 🎉">
+        Organically build an audience for your product by having
+        playtesters post mentions on social media, video reviews, etc...
+      </Card>
     </div>
 
   </div>
