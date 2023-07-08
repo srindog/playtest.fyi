@@ -44,9 +44,9 @@ const PlaytestersHome = () => {
               most valuable
             </span>
           </p>
-          <h2 className="mt-3 md:text-lg text-base">Earn rewards for testing out the {' '}
+          <h2 className="mt-3 md:text-lg text-base">Test out the {' '}
             <span className="text-lime-600 font-semibold">
-            🎾 newest products in tennis 🎾
+              newest products in sports
             </span>
           </h2>
           
@@ -79,7 +79,7 @@ const PlaytestersHome = () => {
           on social media / or a video review!
         </Card>
         <Card title="Save on Future Purchases 💸">
-          Using your rewards, we&apos;ll reimburse you for future tennis-related purchases you make, 
+          Using your rewards, we&apos;ll reimburse you for future sports-related purchases you make, 
           or, if you prefer, cash out directly.
         </Card>
       </div>
@@ -94,14 +94,14 @@ const CompaniesHome = () => (
       <div className="space-y-7 md:pl-20 pl-0">
         <div>
           <h1 className="font-semibold md:text-3xl text-2xl">
-            Build better products <p>for the <span className="text-lime-600">tennis industry</span> </p>
+            Build better products <p>for the <span className="text-lime-600">sports industry</span> </p>
           </h1>
 
           <h2 className="md:text-xl mt-2 text-base">
-            The only product testing platform
+            The only insight driven product testing platform
             {' '}
               <p className="font-semibold text-lime-600">
-              🎾 made for tennis brands 🎾
+                made for sports brands
               </p>
             </h2>
         </div>
